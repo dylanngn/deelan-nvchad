@@ -184,25 +184,10 @@ local default_plugins = {
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
       },
-
-      --copilot
-      {
-        "zbirenbaum/copilot-cmp",
-        config = function()
-          require("copilot_cmp").setup()
-        end,
-      },
     },
-    opts = {
-      sources = {
-        { name = "nvim_lsp" },
-        { name = "luasnip" },
-        { name = "buffer" },
-        { name = "nvim_lua" },
-        { name = "path" },
-        { name = "copilot" },
-      },
-    },
+    opts = function()
+      return require "plugins.configs.cmp"
+    end,
     config = function(_, opts)
       require("cmp").setup(opts)
     end,
