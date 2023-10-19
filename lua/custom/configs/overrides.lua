@@ -36,7 +36,10 @@ M.mason = {
     "typescript-language-server",
     "deno",
     "prettier",
-    "@vue/language-server",
+    "vue-language-server",
+
+    "gopls",
+    "rust-analyzer",
 
     -- c/cpp stuff
     "clangd",
